@@ -13,7 +13,12 @@ terraform apply -var-file="vars.tfvars"
 ```
 
 ## Next steps
+---
 [Configure IPsec/L2TP VPN Clients](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients.md)
+
+## Important notes
+---
+Due to an IPsec/L2TP limitation and an Libreswan [issue](https://github.com/libreswan/libreswan/issues/166), it is not currently possible to connect multiple devices simultaneously from behind the same NAT (e.g. home router). More info [here](https://github.com/hwdsl2/docker-ipsec-vpn-server#important-notes).
 
 ## Input variables
 ---
