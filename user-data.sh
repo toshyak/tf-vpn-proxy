@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # Digiatal ocean monitoring tools
-curl -sSL https://agent.digitalocean.com/install.sh | sudo sh
+curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
 
+#Enable ports in firewall for proxy and VPN
+ufw allow 500/udp
+ufw allow 4500/udp
+ufw allow ${proxy_port}/tcp
 
 #SOCKS5 proxy https://github.com/serjs/socks5-server
 docker pull serjs/go-socks5-proxy
